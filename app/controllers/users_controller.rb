@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
-before_action :create :show
+  def moo
+    @cow = 'moo moo'
+    @dog = 'arf arf'
+    @cat = 'meow'
+    @duck = 'quack quack'
+  end
 
   def new
 
@@ -14,17 +19,7 @@ before_action :create :show
 
   end
   def create
-    @user = User.new(user_params)
+    @user = User.new(picture_params)
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'user was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
   end
-
-end
+end 
