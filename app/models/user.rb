@@ -7,9 +7,9 @@ class User < ApplicationRecord
   #create a new User and store it in a variable called u
     # u = User.new
     #set the users avatar using the file from the input form
-    # u.avatar = params[:file]
+    # u.image = params[:file]
 
-  # save u to the database
+  #ave u to the database
   # u.save!
 
   # u.avatar.url # => '/url/to/file.png'

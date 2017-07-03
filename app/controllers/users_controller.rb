@@ -19,7 +19,8 @@ class UsersController < ApplicationController
 
   end
   def create
-    @user = User.new(picture_params)
+    @user = User.new
+    @user.save 
 
   end
-end 
+end
