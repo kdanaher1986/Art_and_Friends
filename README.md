@@ -27,7 +27,7 @@ Web app has not been deployed in Heroku yet. Clone project, save in your text ed
 
 Tests
 
-Describe and show how to run the tests with code examples.
+Create new users through sign up and tested the login after confirming information was saved in database, confirmed the user profile had gallery saved for that user logged in, and tested the paperclip gem by uploading multiple images in the gallery.
 
 Contributors
 
