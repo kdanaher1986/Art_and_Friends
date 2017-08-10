@@ -1,24 +1,40 @@
-# README
+Synopsis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Artpop is a web app for the classically trained artist to share images of their work through the gallery and also interact with events and chats in the art field. 
 
-Things you may want to cover:
+Code Example
+Code involved included Ruby for backend. Bootstrap, Javascript, HTML for front end, Paperclip to upload images and Devise for user login.
+ex:
+def update
+    respond_to do |format|
+      if @picture.update(picture_params)
+        format.html { redirect_to @picture, notice: 'Picture was successfully updated.' }
+        format.json { render :show, status: :ok, location: @picture }
+      else
+        format.html { render :edit }
+        format.json { render json: @picture.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
-* Ruby version
+Motivation
 
-* System dependencies
+First group project at Wyncode for family and friends
 
-* Configuration
+Installation
 
-* Database creation
+Web app has not been deployed in Heroku yet. Clone project, save in your text editor and launch through the terminal using rails
 
-* Database initialization
+Tests
 
-* How to run the test suite
+Describe and show how to run the tests with code examples.
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributors
 
-* Deployment instructions
+Monica Bello: Backend 
+Alex Puentes: Front End 
+Katherine Danaher: pair programming for both
 
-* ...
+License
+
+N/A
